@@ -15,21 +15,28 @@ const Hero = () => {
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight" style={{textTransform:'capitalize'}}>
-                  Build Your Websites with WebTech Solutions to Grow your Busssiness
+                <h1
+                  className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
+                  style={{ textTransform: "capitalize" }}
+                >
+                  Welcome to{" "}
+                  <span className="text-primary">InnoWebSolutions</span> We make
+                  websites that make your business shine
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 13.x and Tailwind CSS.
+                  Welcome to InnoWeb Solutions, where we specialise in crafting
+                  visually stunning websites that captivate your audience.
+                  Invest in your digital success with a professional website for
+                  just <span className="font-bold">₹6999</span>. Join us on a transformative journey, turning ideas
+                  into impactful web solutions. Your online presence matters,
+                  and at InnoWeb Solutions, we ensure it's unforgettable.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <a
                     href="tel:8688284092"
                     className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    <div className="flex justify-center gap-3 items-center">
+                    <div className="flex items-center justify-center gap-3">
                       <FaPhoneAlt />
                       <p>Contact Us</p>
                     </div>
