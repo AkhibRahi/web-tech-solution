@@ -1,6 +1,12 @@
 import { Brand } from "@/types/brand";
 import Image from "next/image";
-import brandsData from "./brandsData";
+import { FaWordpress } from "react-icons/fa";
+import { RiJavascriptFill } from "react-icons/ri";
+import { FaWix } from "react-icons/fa6";
+import IconReactjsLine from "../icons/IconsReacthjsLine";
+import { SiTsnode } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+
 
 const Brands = () => {
   return (
@@ -11,10 +17,18 @@ const Brands = () => {
             <div
               className="wow fadeInUp bg-gray-light dark:bg-gray-dark flex flex-wrap items-center justify-center rounded-sm px-8 py-8 sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]"
               data-wow-delay=".1s"
+              style={{
+                display:"flex",
+                gap:'30px',
+                justifyContent:'space-around'
+              }}
             >
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
+                <FaWordpress  size={70}/>
+                <RiJavascriptFill size={80}/>
+                <FaWix  size={80}/>
+                <IconReactjsLine  style={{fontSize:'80px'}} />
+                <SiTsnode  size={70}/>
+                <SiTailwindcss  size={70}/>
             </div>
           </div>
         </div>
