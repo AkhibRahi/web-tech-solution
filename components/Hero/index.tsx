@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { FaPhoneAlt } from "react-icons/fa";
-
+import { IoMdMail } from "react-icons/io";
 const Hero = () => {
   return (
     <>
@@ -34,16 +33,16 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <a
                     href="tel:8688284092"
-                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    className="rounded-lg bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
                     <div className="flex items-center justify-center gap-3">
-                      <FaPhoneAlt />
-                      <p>Contact Us</p>
+                      <IoMdMail />
+                      <p>Mail Us</p>
                     </div>
                   </a>
                   <Link
                     href="/about"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    className="inline-block rounded-lg bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
                     Read More
                   </Link>

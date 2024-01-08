@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import { IoMail } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
 import {Link} from 'react-scroll'
 
 const Header = () => {
@@ -146,11 +146,11 @@ const Header = () => {
                 </Link> */}
                 <Link
                   href="/signup"
-                  className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-6 lg:px-5 xl:px-7"
+                  className="ease-in-up hidden rounded-xl bg-primary px-8 py-2 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-6 lg:px-4 xl:px-6"
                 >
                   <div className="flex justify-center items-center gap-2">
-                  <IoMail/>
-                  Mail Us
+                  <FaPhoneAlt/>
+                  Contact Us
                   </div>
                 </Link>
                 <div>
