@@ -11,7 +11,11 @@
   "dependencies": {
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+<<<<<<< HEAD
     "framer-motion": "^10.17.11",
+=======
+    "framer-motion": "^10.17.9",
+>>>>>>> ddd5d96a344d6225a81264c3650d75af5891de42
     "next": "^13.5.6",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
