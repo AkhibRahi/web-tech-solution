@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { IoMdMail } from "react-icons/io";
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <>
@@ -10,7 +12,10 @@ const Hero = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div
+              <motion.div
+                initial={{ x: "-100vw", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.9, ease: "easeInOut" }}
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
@@ -18,21 +23,21 @@ const Hero = () => {
                   className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
                   style={{ textTransform: "capitalize" }}
                 >
-                  Welcome to{" "}
-                  <span className="text-primary">InnoWebSolutions</span> We make
-                  websites that make your business shine
+                  Welcome to <span className="text-primary">Webaholic solutions</span>{" "}
+                  Crafting Digital Excellence Worldwide
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Welcome to InnoWeb Solutions, where we specialise in crafting
-                  visually stunning websites that captivate your audience.
-                  Invest in your digital success with a professional website for
-                  just <span className="font-bold">₹6999</span>. Join us on a transformative journey, turning ideas
-                  into impactful web solutions. Your online presence matters,
-                  and at InnoWeb Solutions, we ensure it's unforgettable.
+                  At WebholicTech, we believe in the transformative power of
+                  technology. Our passion lies in creating exceptional digital
+                  experiences that empower businesses to thrive in the
+                  ever-evolving online landscape. With a global mindset and a
+                  commitment to innovation, we are your partners in web
+                  development and mobile solutions, delivering excellence across
+                  borders.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <a
-                    href="tel:8688284092"
+                    href="mailto:innowebsolution@gmail.com"
                     className="rounded-lg bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
                     <div className="flex items-center justify-center gap-3">
@@ -47,7 +52,7 @@ const Hero = () => {
                     Read More
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
