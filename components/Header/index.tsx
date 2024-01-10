@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { FaPhoneAlt } from "react-icons/fa";
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll'
 
 const Header = () => {
   // Navbar toggle
@@ -43,11 +43,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
-          sticky
+        className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
             ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
             : "absolute bg-transparent"
-        }`}
+          }`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
@@ -55,19 +54,18 @@ const Header = () => {
               <Link
                 to={'home'}
                 smooth={true} duration={1000}
-                className={`header-logo block w-full cursor-pointer ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
+                className={`header-logo block w-full cursor-pointer ${sticky ? "py-5 lg:py-2" : "py-8"
+                  } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/images/logo/webaholic-logo-3.png"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/webaholic-logo-3.png"
                   alt="logo"
                   width={140}
                   height={30}
@@ -84,41 +82,36 @@ const Header = () => {
                   className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                 >
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[7px] rotate-45" : " "
-                    }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[7px] rotate-45" : " "
+                      }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? "opacity-0 " : " "
-                    }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? "opacity-0 " : " "
+                      }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[-8px] -rotate-45" : " "
-                    }`}
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[-8px] -rotate-45" : " "
+                      }`}
                   />
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
-                    navbarOpen
-                      ? "visibility top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
-                  }`}
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 transform transition-opacity ease-in-out dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen
+                      ? "visibility top-full opacity-100 translateX-100 transition-opacity duration-500 w-full"
+                      : "invisible top-[120%] opacity-0 scale-95 transition-opacity duration-300"
+                    }`}
                 >
                   <ul className="block lg:flex lg:space-x-12">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
-                          smooth={true} duration={1000}
+                            smooth={true} duration={1000}
                             to={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 cursor-pointer ${
-                              usePathName === menuItem.path
+                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 cursor-pointer ${usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
-                            }`}
+                              }`}
                           >
                             {menuItem.title}
                           </Link>
@@ -138,19 +131,13 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {/* <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link> */}
                 <Link
                   href="/signup"
                   className="ease-in-up hidden rounded-xl bg-primary px-8 py-2 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-6 lg:px-4 xl:px-6"
                 >
                   <div className="flex justify-center items-center gap-2">
-                  <FaPhoneAlt/>
-                  Contact Us
+                    <FaPhoneAlt />
+                    Contact Us
                   </div>
                 </Link>
                 <div>
