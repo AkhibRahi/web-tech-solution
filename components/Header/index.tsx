@@ -7,6 +7,7 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from 'react-scroll'
+import { IoMdMail } from "react-icons/io";
 
 const Header = () => {
   // Navbar toggle
@@ -130,18 +131,19 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signup"
-                  className="ease-in-up hidden rounded-xl bg-primary px-8 py-2 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-6 lg:px-4 xl:px-6"
-                >
-                  <div className="flex justify-center items-center gap-2">
+              <div className="flex items-center justify-end pr-16 lg:pr-0 gap-3">
+              <a
+                    href="mailto:innowebsolution@gmail.com"
+                    // className="rounded-lg bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                  >
+                      <IoMdMail className="text-primary" />
+                  </a>
+                  <div className="flex justify-center items-center gap-2 text-primary">
                     <FaPhoneAlt />
-                    Contact Us
+                    <span className="text-xs md:text-base">+91-9867714026</span>
                   </div>
-                </Link>
                 <div>
-                  <ThemeToggler />
+                  <ThemeToggler  />
                 </div>
               </div>
             </div>

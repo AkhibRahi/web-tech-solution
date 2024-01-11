@@ -20,12 +20,12 @@ const HomePage = () => {
         <>
             <ScrollUp />
             <Hero />
-            <Features />
             <AboutSectionOne />
+            {/* <AboutSectionTwo /> */}
+            <Features />
             <Pricing />
             <Video />
             <Brands />
-            <AboutSectionTwo />
             <Testimonials />
             <Blog />
             <Contact />
