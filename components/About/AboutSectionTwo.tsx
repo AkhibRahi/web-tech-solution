@@ -26,13 +26,22 @@ const AboutSectionTwo = () => {
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
-                </h3>
+              <div className="relative text-center pb-2 mb-5">
+                {/* <!-- First h2 with position absolute --> */}
+                <h2 className="w-full mt-75 text-3xl font-bold">About WebaholicTech</h2>
+
+                {/* <!-- Second h2 with specified styles --> */}
+                <h2 className="text-8xl absolute opacity-10 text-uppercase" style={{
+                  width:'100%',
+                  bottom:'-35%',
+                  textAlign:'center',
+                }}>About Us</h2>
+              </div>
+              <div className="mb-9 pt-4">
+
+
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                At Webaholic, we are not just a tech company; we are architects of digital innovation, creators of seamless online experiences, and enthusiasts of cutting-edge technology. Established with a passion for pushing the boundaries of what's possible, we embark on a journey to transform ideas into captivating digital solutions.
                 </p>
               </div>
               <div className="mb-9">

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { FaPhoneAlt } from "react-icons/fa";
-import { Link } from 'react-scroll'
+import Link from 'next/link'
 
 const Header = () => {
   // Navbar toggle
@@ -52,8 +52,7 @@ const Header = () => {
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
-                to={'home'}
-                smooth={true} duration={1000}
+                href='/'
                 className={`header-logo block w-full cursor-pointer ${sticky ? "py-5 lg:py-2" : "py-8"
                   } `}
               >
@@ -106,8 +105,7 @@ const Header = () => {
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
-                            smooth={true} duration={1000}
-                            to={menuItem.path}
+                            href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 cursor-pointer ${usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
