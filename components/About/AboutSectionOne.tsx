@@ -1,5 +1,8 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import AboutSectionTwo from "./AboutSectionTwo";
+import Flowchart from "./FlowChart";
+import FeaturesTab from "../FeatureTab";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -9,8 +12,8 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+    <p className="mb-5 flex text-lg font-medium text-body-color">
+      <span className="mr-4 flex h-[30px] p-2 w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
         {checkIcon}
       </span>
       {text}
@@ -18,60 +21,81 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
-                mb="44px"
-              />
+    <div>
+      <section id="about" className="pt-16 md:pt-20 lg:pt-20">
+        <div className="px-16 text-justify md:px-20 lg:px-16" >
+          <div className="relative">
+            <h2 className="absolute top-0 left-0 w-full mt-75 text-4xl font-bold" style={{
+              width: '100%',
+              textAlign: 'center',
+              top: '45%'
+            }} id="AboutCompany">How We Work!</h2>
+            <h2 className="text-9xl opacity-10 text-uppercase" style={{ fontWeight: 'bold' }} id="about-us-1">About Us</h2>
+          </div>
 
-              <div
-                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
-                  </div>
+        </div>
+        <div className="container">
+          <div className=" border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-12">
+            <div className="-mx-4 flex flex-wrap items-center">
+              <div className="w-full px-4 lg:w-1/2">
 
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+
+                <h2 className="mb-8 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+                  What We Offer
+                </h2>
+                <div
+                  className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+                  data-wow-delay=".15s"
+                >
+                  <div className="mx-[-12px] flex flex-wrap">
+                    <div className="w-full px-3 lg:w-full">
+                      <List text="Web Development: Immerse your brand in the digital space with our professional web development services. From sleek corporate websites to robust e-commerce platforms, we have the expertise to bring your vision to life." />
+                      <List text="Mobile App Development: Elevate your brand with our mobile app development solutions. Whether you're targeting iOS or Android users, we create apps that combine functionality with a seamless user experience." />
+                    </div>
+
+                    {/* <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    <List text="Best Practices" />
+                    <List text="optimized code" />
+                    <List text="User friendly" />
+                  </div> */}
                   </div>
                 </div>
+                <h2 className="mb-8 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+                  Our Commitments
+                </h2>
+                <p className="text-base !leading-relaxed text-body-color md:text-lg">
+                  Despite being a small team, we are committed to offering custom websites and mobile apps at affordable prices. Our focus extends from small businesses and startups to larger e-commerce enterprises, providing cost-effective digital solutions that exceed expectations.
+                </p>
               </div>
-            </div>
 
-            <div className="w-full px-4 lg:w-1/2">
-              <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
-                data-wow-delay=".2s"
-              >
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
-                />
+              <div className="w-full px-4 lg:w-1/2">
+                <div
+                  className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
+                  data-wow-delay=".2s"
+                >
+                  <Image
+                    // src="https://img.freepik.com/free-vector/desktop-smartphone-app-development_23-2148683810.jpg?w=826&t=st=1704900217~exp=1704900817~hmac=e157bfd8b7be3da6dcc2517aa5b02d779da010ae2f8bebc43ce983bcfaf97e88"
+                    src="/images/about/about-us-img.jpeg"
+                    alt="about-image"
+                    fill
+                    className="mx-auto max-w-full object-contain drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  />
+                  <Image
+                    src="/images/about/about-us-img.jpeg"
+
+                    alt="about-image"
+                    fill
+                    className="mx-auto hidden max-w-full object-contain drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <FeaturesTab />
+      
+    </div>
   );
 };
 

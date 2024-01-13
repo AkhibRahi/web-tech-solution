@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { IoMdMail } from "react-icons/io";
 import { motion } from "framer-motion";
+import TypingEffect from "../tools/TypingEffect";
 const Hero = () => {
   return (
     <>
@@ -24,7 +25,7 @@ const Hero = () => {
                   style={{ textTransform: "capitalize" }}
                 >
                   Welcome to <span className="text-primary">Webaholic solutions</span>{" "}
-                  Crafting Digital Excellence Worldwide
+                   We Build <TypingEffect />
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   At WebholicTech, we believe in the transformative power of

@@ -1,4 +1,3 @@
-// icon:reactjs-line | Remix Icon https://remixicon.com/ | Remix Design
 import * as React from "react";
 
 function IconReactjsLine(props: React.SVGProps<SVGSVGElement>) {
